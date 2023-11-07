@@ -1,3 +1,3 @@
 # git-course
 For education
-Check updataes
+Check updates 07.11.2023
