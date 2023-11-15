@@ -109,3 +109,11 @@ Task  | Answer
 ------------- | -------------
 Find the number of movies each director has directed   | `SELECT director, COUNT(id) as Num_movies_directed FROM movies GROUP BY director;`
 Find the total domestic and international sales that can be attributed to each director | `SELECT director, SUM(domestic_sales + international_sales) as Cumulative_sales_from_all_movies FROM movies INNER JOIN boxoffice ON movies.id = boxoffice.movie_id GROUP BY director;` 
+
+
+### LESSON 13: Inserting rows
+
+Task  | Answer
+------------- | -------------
+Add the studio's new production, ***Toy Story 4*** to the list of movies (you can use any director)   | `INSERT INTO movies VALUES (4, "Toy Story 4", "Lee Lasseter", 2015, 90);`
+Toy Story 4 has been released to critical acclaim! It had a rating of ***8.7***, and made ***340 million domestically*** and ***270 million internationally***. Add the record to the BoxOffice table. | `INSERT INTO boxoffice VALUES (4, 8.7, 340000000, 270000000);`
