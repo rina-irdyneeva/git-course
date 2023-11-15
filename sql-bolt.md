@@ -8,3 +8,12 @@ Find the title and director of each film  | `SELECT title, director FROM movies;
 Find the title and year of each film | `SELECT title, year FROM movies;`
 Find all the information about each film  | `SELECT * FROM movies;`
 
+
+### LESSON 2: Queries with constraints (Pt. 1) 
+
+Task  | Answer
+------------- | -------------
+Find the movie with a row ***id*** of 6   | `SELECT * FROM movies WHERE id=6;`
+Find the movies released in the ***year***s between 2000 and 2010   | `SELECT * FROM movies WHERE year BETWEEN 2000 AND 2010;`
+Find the movies ***not*** released in the ***year***s between 2000 and 2010  | `SELECT * FROM movies WHERE year NOT BETWEEN 2000 AND 2010;`
+Find the first 5 Pixar movies and their release ***year*** | `SELECT * FROM movies WHERE id IN (1,2,3,4,5);` `SELECT * FROM movies WHERE id < 6;`
