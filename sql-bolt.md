@@ -126,3 +126,11 @@ Task  | Answer
 The director for A Bug's Life is incorrect, it was actually directed by ***John Lasseter***   | `UPDATE movies SET director = "John Lasseter" WHERE id = 2;`
 The year that Toy Story 2 was released is incorrect, it was actually released in ***1999*** | `UPDATE movies SET year = 1999 WHERE id = 3;`
 Both the title and director for Toy Story 8 is incorrect! The title should be "Toy Story 3" and it was directed by ***Lee Unkrich*** | `UPDATE movies SET title = "Toy Story 3", director = "Lee Unkrich" WHERE id = 11;` 
+
+
+### LESSON 15: Deleting rows
+
+Task  | Answer
+------------- | -------------
+This database is getting too big, lets remove all movies that were released ***before*** 2005.   | `DELETE FROM movies where year < 2005;`
+Andrew Stanton has also left the studio, so please remove all movies directed by him. | `DELETE FROM movies where director = "Andrew Stanton";`
