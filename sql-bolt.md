@@ -48,3 +48,12 @@ Order all the cities in the United States by their latitude from north to south 
 List all the cities west of Chicago, ordered from west to east | `SELECT * FROM north_american_cities WHERE longitude <-87.629798 ORDER BY longitude;`
 List the two largest cities in Mexico (by population) | `SELECT * FROM north_american_cities WHERE country='Mexico' ORDER BY population DESC LIMIT 2;`
 List the third and fourth largest cities (by population) in the United States and their population | `SELECT * FROM north_american_cities WHERE country='United States' ORDER BY population DESC LIMIT 2 OFFSET 2;`
+
+
+### LESSON 6: Multi-table queries with JOINs
+
+Task  | Answer
+------------- | -------------
+Find the domestic and international sales for each movie   | `SELECT * FROM movies LEFT JOIN boxoffice ON movies.id=boxoffice.movie_id;`
+Show the sales numbers for each movie that did better internationally rather than domestically | `SELECT * FROM movies LEFT JOIN boxoffice ON movies.id=boxoffice.movie_id WHERE boxoffice.international_sales > boxoffice.domestic_sales;`
+List all the movies by their ratings in descending order | `SELECT title, rating FROM movies LEFT JOIN boxoffice ON movies.id=boxoffice.movie_id ORDER BY boxoffice.rating DESC;`
