@@ -134,3 +134,11 @@ Task  | Answer
 ------------- | -------------
 This database is getting too big, lets remove all movies that were released ***before*** 2005.   | `DELETE FROM movies where year < 2005;`
 Andrew Stanton has also left the studio, so please remove all movies directed by him. | `DELETE FROM movies where director = "Andrew Stanton";`
+
+
+### LESSON 16: Creating tables
+
+
+Task  | Answer
+------------- | -------------
+Create a new table named ***Database*** with the following columns: <br>– ***Name*** A string (text) describing the name of the database <br>– ***Version*** A number (floating point) of the latest version of this database <br>– ***Download_count*** An integer count of the number of times this database was downloaded. This table has no constraints.   | `CREATE TABLE Database (Name TEXT, Version FLOAT,Download_count INTEGER);`
