@@ -72,3 +72,16 @@ VALUES
 (4, 8.1, 289916256, 272900000),
 (2, 7.2, 162798565, 200600000),
 (13, 7.2, 237283207, 301700000);
+
+-- Main table for the lesson 7
+CREATE TABLE IF NOT EXISTS Buildings (
+building_name VARCHAR(2) NOT NULL,
+capacity INTEGER NOT NULL);
+
+-- Buildings's data
+INSERT INTO Buildings (building_name, capacity)
+VALUES
+('1e', 24),
+('1w', 32),
+('2e', 16),
+('2w', 20);
