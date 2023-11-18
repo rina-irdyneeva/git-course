@@ -32,7 +32,7 @@ population INTEGER NOT NULL,
 latitude FLOAT NOT NULL,
 longitude FLOAT NOT NULL);
 
--- Movies data
+-- Cities data
 INSERT INTO North_american_cities (city, country, population, latitude, longitude)
 VALUES
 ('Guadalajara', 'Mexico', 1500800, 20.659699, -103.349609),
@@ -47,3 +47,28 @@ VALUES
 ('Ecatepec de Morelos', 'Mexico', 1742000, 19.601841, -99.050674),
 ('Montreal', 'Canada', 1717767, 45.501689, -73.567256),
 ('Chicago', 'United States', 2718782, 41.878114, -87.629798);
+
+-- Main table for the lesson 6
+CREATE TABLE IF NOT EXISTS Boxoffice (
+movie_id INTEGER NOT NULL,
+rating FLOAT NOT NULL,
+domestic_sales INTEGER NOT NULL,
+International_sales INTEGER NOT NULL);
+
+-- Boxoffice's data
+INSERT INTO Boxoffice (movie_id, rating, domestic_sales, international_sales)
+VALUES
+(5, 8.2, 380843261, 555900000),
+(14, 7.4, 268492764, 475066843),
+(8, 8, 206445654, 417277164),
+(12, 6.4, 191452396, 368400000),
+(3, 7.9, 245852179, 239163000),
+(6, 8, 261441092, 370001000),
+(9, 8.5, 223808164, 297503696),
+(11, 8.4, 415004880, 648167031),
+(1, 8.3, 191796233, 170162503),
+(7, 7.2, 244082982, 217900167),
+(10, 8.3, 293004164, 438338580),
+(4, 8.1, 289916256, 272900000),
+(2, 7.2, 162798565, 200600000),
+(13, 7.2, 237283207, 301700000);
